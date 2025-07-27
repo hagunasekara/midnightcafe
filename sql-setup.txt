@@ -1,0 +1,81 @@
+CREATE DATABASE midnightcafe;
+USE midnightcafe;
+
+-- Signature dishes
+CREATE TABLE signature (
+  sid INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(100),
+  description VARCHAR(200),
+  src VARCHAR(100)
+);
+
+INSERT INTO signature (title, description,src) VALUES
+('Truffle Mushroom Pasta', 'Creamy delight with wild mushrooms & herbs.','gallery-01.jpg'),
+('Charred Lemon Salmon', 'Fresh salmon grilled with citrus glaze.',"gallery-02.jpg"),
+('Molten Lava Cake', 'Rich dark chocolate center with a warm crust.',"gallery-03.jpg");
+
+-- Team
+CREATE TABLE team (
+  tid INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100),
+  role VARCHAR(100)
+);
+
+INSERT INTO team (name, role) VALUES
+('Anna Williams', 'Head Chef'),
+('James O''Neill', 'General Manager'),
+('Maria Lopez', 'Sous Chef'),
+('Lee Chen', 'Senior Waiter');
+
+-- Menu
+CREATE TABLE menu (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(100),
+  description VARCHAR(250),
+  price INT,
+  rating FLOAT,
+  img VARCHAR(100),
+  category VARCHAR(100)
+);
+
+INSERT INTO menu (title, description, price, rating, img, category) VALUES
+('Truffle Mushroom Pasta', 'Creamy truffle-infused sauce with wild mushrooms.', 1200, 4.7, 'pasta.jpg', 'Mains'),
+('Spicy Korean Wings', 'Crispy wings tossed in gochujang sauce.', 850, 4.4, 'wings.jpg', 'Mains'),
+('Midnight Mocha', 'Dark chocolate & espresso blend topped with cream.', 650, 4.8, 'mocha.jpg', 'Drinks'),
+('Red Velvet Lava Cake', 'Warm cake with a molten chocolate center.', 700, 4.6, 'lavacake.jpg', 'Desserts'),
+('Charred Corn Elote Bites', 'Grilled corn bites with lime mayo and cotija cheese.', 550, 4.3, 'elote.jpg', 'Starters'),
+('Saffron Butter Lobster Roll', 'Lobster tossed in saffron butter on brioche.', 1800, 4.9, 'lobsterroll.jpg', 'Mains'),
+('Sunset Berry Spritzer', 'Mixed berry soda with a hint of mint and lime.', 520, 4.5, 'spritzer.jpg', 'Drinks'),
+('Tokyo Tempura Tacos', 'Crispy tempura prawns in nori tacos with wasabi mayo.', 950, 4.7, 'tempurataco.jpg', 'Mains'),
+('Matcha Cloud Cheesecake', 'Fluffy matcha cheesecake with whipped cream cloud.', 780, 4.6, 'matchacheese.jpg', 'Desserts'),
+('Loaded Midnight Nachos', 'Cheddar-loaded nachos with smoky chipotle dip.', 650, 4.4, 'nachos.jpg', 'Starters'),
+('Vanilla Bean Affogato', 'Scoop of vanilla bean ice cream drowned in espresso.', 600, 4.8, 'affogato.jpg', 'Desserts'),
+('Twilight Tiramisu', 'Espresso-soaked layers with mascarpone cream.', 730, 4.7, 'tiramisu.jpg', 'Desserts'),
+('Lemongrass Iced Tea', 'Cold-brewed tea with lemongrass and citrus.', 450, 4.2, 'icedtea.jpg', 'Drinks'),
+('Firecracker Cauliflower', 'Spicy fried cauliflower bites with chili glaze.', 580, 4.5, 'cauliflower.jpg', 'Starters');
+
+-- Gallery
+CREATE TABLE gallery (
+  gid INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(200),
+  src VARCHAR(100)
+);
+
+INSERT INTO gallery (name, src) VALUES
+('Cozy Cafe Corner', 'gallery1'),
+('Elegant Table Setting', 'gallery2'),
+('Delicious Dish Close-up', 'gallery3'),
+('MidnightCafe Exterior', 'gallery4'),
+('Happy Customers', 'gallery5'),
+('Barista Making Coffee', 'gallery6'),
+('Cocktails on the Bar', 'gallery7'),
+('Night Ambiance Lighting', 'gallery8');
+
+-- Messages
+CREATE TABLE messages (
+  mid INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(200),
+  email VARCHAR(250),
+  subject VARCHAR(200),
+  msg VARCHAR(250)
+);

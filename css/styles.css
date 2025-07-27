@@ -1,0 +1,70 @@
+/* Imports */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600;8..144,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+* {
+  font-family: "Roboto Flex";
+}
+
+.playfair {
+  font-family: "Playfair Display";
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.rotate-textPath {
+  animation: spin 15s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    color: #ef4444; /* red-500 */
+    text-shadow: none;
+    transform: scale(1);
+  }
+  50% {
+    color: #facc15; /* yellow-400 */
+    text-shadow: 0 0 8px #facc15;
+    transform: scale(1.1);
+  }
+}
+
+.text-animate-loop span {
+  animation: pulseGlow 3s ease-in-out infinite;
+  display: inline-block;
+}
+
+/* Delay each span to pulse one after another */
+.text-animate-loop span:nth-child(1) {
+  animation-delay: 0s;
+}
+.text-animate-loop span:nth-child(2) {
+  animation-delay: 0.75s;
+}
+.text-animate-loop span:nth-child(3) {
+  animation-delay: 1.5s;
+}
+.text-animate-loop span:nth-child(4) {
+  animation-delay: 2.25s;
+}
+
+@keyframes fillText {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: 0% 0;
+  }
+}
+
+.animate-fill-text {
+  animation: fillText 2s ease-in-out forwards;
+}

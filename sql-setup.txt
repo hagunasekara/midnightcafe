@@ -23,10 +23,10 @@ CREATE TABLE team (
 );
 
 INSERT INTO team (name, role) VALUES
-('Anna Williams', 'Head Chef'),
-('James O''Neill', 'General Manager'),
-('Maria Lopez', 'Sous Chef'),
-('Lee Chen', 'Senior Waiter');
+('Anna Williams', 'Head Chef', 'member1.jpg'),
+('James O''Neill', 'General Manager', 'member2.jpg'),
+('Maria Lopez', 'Sous Chef', 'member3.jpg'),
+('Lee Chen', 'Senior Waiter', 'member4.jpg');
 
 -- Menu
 CREATE TABLE menu (

@@ -18,7 +18,8 @@ INSERT INTO signature (title, description,src) VALUES
 CREATE TABLE team (
   tid INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(100),
-  role VARCHAR(100)
+  role VARCHAR(100),
+  image VARCHA(100) 
 );
 
 INSERT INTO team (name, role) VALUES
